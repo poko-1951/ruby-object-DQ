@@ -35,10 +35,8 @@ class Brave < Character
     attack_type = params[:attack_type]
 
     if attack_type == "special_attack"
-      # puts "必殺攻撃"
       damage = calculate_special_attack - target.defense
     else
-      # puts "通常攻撃"
       damage = @offense - target.defense
     end
   end
@@ -51,7 +49,6 @@ class Brave < Character
 
     target.hp = 0 if target.hp < 0
 
-    # puts "#{target.name}は#{damage}のダメージを受けた"
   end
 
   def calculate_special_attack
