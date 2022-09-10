@@ -9,7 +9,7 @@ module MessageDialog
   # ダメージを受けた時のメッセージ
   def damage_message(**params)
     target = params[:target]
-    damage = params[:damage]
+    damage = params[:damage].round
 
     puts <<~EOS
 
@@ -33,7 +33,7 @@ module MessageDialog
     else
       puts <<~EOS
 
-      勇者はまけた
+      勇者は敗北した
       目の前が真っ暗になった
 
       EOS
